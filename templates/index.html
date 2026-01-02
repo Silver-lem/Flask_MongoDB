@@ -9,6 +9,24 @@
     <p>Hi! Welcome to the Sign Up Page</p>
     <p>Today is a {{ day_of_the_week }}</p>
     <p>The time is {{ current_time }}</p>
+
+    <div class="centered">
+        <form action="/submit" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name">
+            <!-- <br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email">
+            <br>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter your Password">
+            <br>
+            <label for="confirm_password">confirm_password</label>
+            <input type="confirm_password" name="confirm_password" id="confirm_password" placeholder="confirm password">
+            <br> -->
+            <input type="button" value="Submit">
+        </form>
+    </div>
     
 </body>
 <style>
@@ -21,6 +39,13 @@
         font-size: 30px;
         font-family: Arial, Helvetica, sans-serif;
         color: yellow;
+    }
+
+    .centered{
+        margin:auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
     }
 
 
