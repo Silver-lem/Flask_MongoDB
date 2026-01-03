@@ -46,7 +46,9 @@ def submit():
     # return 'Hello, ' + name + '!'
     form_data = dict(request.form)
 
-    print(form_data)
+    # print(form_data)
+    collection.insert_one(form_data)
+
     return form_data
 
 if __name__ == '__main__':
