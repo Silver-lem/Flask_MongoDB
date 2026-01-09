@@ -55,9 +55,19 @@ def submit():
 def view():
 
     data = collection.find()
+    data = list(data)
+    # print(data) -- A cursor is a list of objects a collect is a list of json objects
+    for item in data:
+        print(item)
 
-    print(data)
-    return "data retrieved succesfully"
+        del item['_id']
+
+    data = {
+        'data' : data
+    }
+
+    # return "data retrieved succesfully"
+    return data
 
 if __name__ == '__main__':
     app.run(debug=True)
