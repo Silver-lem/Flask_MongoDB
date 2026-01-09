@@ -49,7 +49,8 @@ def submit():
     # print(form_data)
     collection.insert_one(form_data)
 
-    return form_data
+    # return form_data
+    return "data submitted succesfully"
 
 @app.route('/view')
 def view():
