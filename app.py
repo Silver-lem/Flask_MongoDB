@@ -51,5 +51,13 @@ def submit():
 
     return form_data
 
+@app.route('/view')
+def view():
+
+    data = collection.find()
+
+    print(data)
+    return "data retrieved succesfully"
+
 if __name__ == '__main__':
     app.run(debug=True)
